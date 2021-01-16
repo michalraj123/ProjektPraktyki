@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
  
   ngOnInit():void{}
  
-  publiclogin(){
+  public login(){
     if(this.input.login&& this.input.password) {
       let headers = new HttpHeaders({ 'content-type': 'application/json' });
       this.http.post('http://localhost:4200/login',JSON.stringify(this.input),{headers:headers})

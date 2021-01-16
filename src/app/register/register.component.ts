@@ -17,16 +17,17 @@ export class RegisterComponent implements OnInit{
       'Imie':'',
       'login':'',
       'Nazwisko':'',
-      'Haslo':''
+      'Haslo':'',
+      'Admin': Boolean,
     };
   }
  
   ngOnInit():void{}
  
-  publicregister(){
+  public register(){
     if(this.input.login&& this.input.haslo) {
       let headers = new HttpHeaders({ 'content-type': 'application/json' });
-      this.http.post('http://localhost:3000/account',JSON.stringify(this.input),{headers:headers})
+      this.http.post('http://localhost:4200/todolist',JSON.stringify(this.input),{headers:headers})
         .subscribe(()=>
           this.router.navigate(['/login'])
         );
