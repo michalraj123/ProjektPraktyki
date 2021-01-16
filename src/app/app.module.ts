@@ -7,18 +7,20 @@ import { LoginComponent } from './login/login.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from'@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     TodolistComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'todolist', component:TodolistComponent},
