@@ -15,7 +15,7 @@
  const cluster=newcouchbase.Cluster('couchbase://localhost',{
    username:'Administrator',password:'password'
  })
- const bucket=cluster.bucket('blog')
+ const bucket=cluster.bucket('Strona')
  const collection=bucket.defaultCollection()
   
  const server=app.listen(3000,()=>console.info(`Runningonport${server.address().port}...`))
