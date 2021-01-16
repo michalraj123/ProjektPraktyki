@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { RouterModule } from '@angular/router';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    TodolistComponent
+    TodolistComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,8 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'todolist', component:TodolistComponent},
+      {path: 'register', component:RegisterComponent},
+      {path: '', redirectTo: '/login', pathMatch: 'full'},
     ])
   ],
   providers: [],
