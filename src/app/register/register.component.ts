@@ -18,7 +18,6 @@ export class RegisterComponent implements OnInit{
       'login':'',
       'Nazwisko':'',
       'Haslo':'',
-      'Admin': Boolean,
     };
   }
  
